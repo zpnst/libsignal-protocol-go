@@ -1,13 +1,14 @@
 package tests
 
 import (
-	"github.com/RadicalApp/libsignal-protocol-go/groups"
-	"github.com/RadicalApp/libsignal-protocol-go/keys/prekey"
-	"github.com/RadicalApp/libsignal-protocol-go/logger"
-	"github.com/RadicalApp/libsignal-protocol-go/protocol"
-	"github.com/RadicalApp/libsignal-protocol-go/serialize"
-	"github.com/RadicalApp/libsignal-protocol-go/session"
 	"testing"
+
+	"github.com/zpnst/libsignal-protocol-go/groups"
+	"github.com/zpnst/libsignal-protocol-go/keys/prekey"
+	"github.com/zpnst/libsignal-protocol-go/logger"
+	"github.com/zpnst/libsignal-protocol-go/protocol"
+	"github.com/zpnst/libsignal-protocol-go/serialize"
+	"github.com/zpnst/libsignal-protocol-go/session"
 )
 
 // TestGroupSessionBuilder checks building of a group session.
