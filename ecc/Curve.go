@@ -74,7 +74,7 @@ func VerifySignature(signingKey ECPublicKeyable, message []byte, signature [64]b
 func VerifySignatureAsync(signingKey ECPublicKeyable, message []byte, signature [64]byte, completion complete.Completionable) {
 	go func() {
 		r := VerifySignature(signingKey, message, signature)
-		if r == false {
+		if !r {
 			completion.OnFailure("Signature invalid")
 			return
 		}

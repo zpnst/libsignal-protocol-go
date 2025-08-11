@@ -41,8 +41,7 @@ func sign(privateKey *[32]byte, message []byte, random [64]byte) *[64]byte {
 	var R edwards25519.Point
 	R.ScalarBaseMult(rReduced)
 
-	var encodedR [32]byte
-	encodedR = *(*[32]byte)(R.Bytes())
+	var encodedR [32]byte = *(*[32]byte)(R.Bytes())
 
 	// Calculate S = r + SHA2-512(R || A_ed || msg) * a  (mod L)
 	var hramDigest [64]byte
